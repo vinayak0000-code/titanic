@@ -11,7 +11,7 @@ model1 = pickle.load(open('Titanic_modelKNN.pkl','rb'))
 @app.route('/')
 def home():
   
-    return render_template("index1.html")
+    return render_template("index.html")
   
 @app.route('/predict',methods=['GET'])
 
@@ -39,7 +39,7 @@ def predict():
     else:
       prediction_text = 'Not Survived'
         
-    return render_template('index.1html', prediction_text='KNN model has predict about the survival of person for given features  : {}'.format(prediction_text))
+    return render_template('index.html', prediction_text='KNN model has predict about the survival of person for given features  : {}'.format(prediction_text))
 
 
 app.run()
