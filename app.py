@@ -5,7 +5,7 @@ import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('lineartitnic.pkl','rb')) 
+model = pickle.load(open('Titanic_modelKNN.pkl','rb')) 
 
 
 @app.route('/')
